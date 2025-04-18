@@ -52,7 +52,6 @@ function InterfaceManager:BuildInterfaceSection(tab)
 
     local InterfaceTheme = section:AddDropdown("InterfaceTheme", {
         Title = "Theme",
-        Description = "Changes the interface theme.",
         Values = Library.Themes,
         Default = Settings.Theme,
         Callback = function(Value)
@@ -67,7 +66,7 @@ function InterfaceManager:BuildInterfaceSection(tab)
     if Library.UseAcrylic then
         section:AddToggle("AcrylicToggle", {
             Title = "Acrylic",
-            Description = "The blurred background requires graphic quality 8+",
+            Description = "Graphic quality 8+",
             Default = Settings.Acrylic,
 
             Callback = function(Value)
@@ -80,9 +79,8 @@ function InterfaceManager:BuildInterfaceSection(tab)
 
     section:AddToggle("TransparentToggle", {
         Title = "Transparency",
-        Description = "Makes the interface transparent.",
         Default = Settings.Transparency,
-		
+
         Callback = function(Value)
             Library:ToggleTransparency(Value)
             Settings.Transparency = Value
