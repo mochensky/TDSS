@@ -63,19 +63,17 @@ function InterfaceManager:BuildInterfaceSection(tab)
 
 	InterfaceTheme:SetValue(Settings.Theme)
 
-    if Library.UseAcrylic then
-        section:AddToggle("AcrylicToggle", {
-            Title = "Acrylic",
-            Description = "Graphic quality 8+",
-            Default = Settings.Acrylic,
+	section:AddToggle("AcrylicToggle", {
+		Title = "Acrylic",
+		Description = "Graphic quality 8+",
+		Default = Settings.Acrylic,
 
-            Callback = function(Value)
-                Library:ToggleAcrylic(Value)
-                Settings.Acrylic = Value
-                InterfaceManager:SaveSettings()
-            end
-        })
-    end
+		Callback = function(Value)
+			Library:ToggleAcrylic(Value)
+			Settings.Acrylic = Value
+			InterfaceManager:SaveSettings()
+		end
+	})
 
     section:AddToggle("TransparentToggle", {
         Title = "Transparency",
