@@ -3,7 +3,7 @@ local InterfaceManager = {}
 
 InterfaceManager.Folder = "TDSS"
 InterfaceManager.Settings = {
-    Theme = "Dark",
+    Theme = "Darker",
     Acrylic = true,
     Transparency = true,
     MenuKeybind = "RightShift"
